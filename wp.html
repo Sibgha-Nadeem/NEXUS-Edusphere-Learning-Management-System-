@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NEXUS UNIVERSITY</title>
+  <style>
+    :root {
+      --text-color:white;
+      --background-color:var(--background-image);
+      --background-image:url('https://i.pinimg.com/originals/2f/ab/f3/2fabf3ceb5a35b51a70e27137d56e4d2.gif');
+    }
+
+    body {
+      background-image: var(--background-image);
+      background-size: cover;
+      color: var(--text-color); 
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; 
+      margin: 0;
+    }
+  
+    header {
+      text-align: center;
+      margin-top: 1px;
+      position: relative;
+      animation: fadeIn 2s ease forwards;
+      background-color: var(--background-color); /* Set background color */
+    }
+    img 
+    {
+      width: 500px; 
+      height: auto;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      transition: transform 0.2s ease;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+    input[type=text], input[type=password] {
+      width: 80%;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      padding: 10px; /* Adjust padding */
+      font-size: 50px; /* Adjust font size */
+      margin-bottom: 10px; /* Adjust margin */
+      background-color: white; /* Set background color */
+    }
+
+    input[type="checkbox"] {
+      width: 20px;
+      height: 30px;
+       color: white;
+    }
+    
+    select, button {
+      font-size: 50px; /* Adjust font size */
+      padding: 12px 20px; /* Adjust padding */
+      background-color: var(--background-color); /* Set background color */
+      color: white;
+    }
+
+    label {
+      display: block; 
+      margin-bottom: 10px; 
+       color: white;
+    }
+
+    footer {
+      text-align: center;
+      margin-bottom: 10px;
+      animation: slideInFromBottom 2s ease forwards;
+      background-color: var(--background-color); /* Set background color */
+    }
+
+    @keyframes slideInFromLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromBottom {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <h1> WELCOME TO EDUSPHERE </h1>
+    <a href="https://postimg.cc/7GMcsqdf"><img src="https://i.postimg.cc/KYM3zKPJ/nexus.png" alt="edusphere" border="0"></a>
+  </header>
+
+  <form action="http://localhost/Mine/login.php" method="post">
+    <div class="container" style="background-color:var(--background-image);font-size: 50px;">
+      
+      <label for="uname"><b>Username:</b></label>
+      <input type="text" placeholder=" i.e NXS1234" name="Uid" required>
+
+      <label for="psw"><b>Password:</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <br> 
+      <button type="submit">Sign in</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> 
+        Remember me
+      </label>
+    </div>
+  </form>
+
+  <footer>
+    <p>&copy; 2024 NEXUS </p>
+    <p>ALL RIGHTS RESERVED </p>
+  </footer>
+</body>
+</html>
